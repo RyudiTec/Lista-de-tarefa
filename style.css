@@ -1,0 +1,146 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #232526, #414345);
+}
+
+
+.caixa {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+
+#todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+#todo-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#todo-input:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #00b894;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition:  0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #00d1a8;
+}
+
+
+#todo-list {
+  list-style: none;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+#todo-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+#todo-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#todo-list li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#todo-list li.completed span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+#todo-list span {
+  flex: 1;
+}
+
+.delete-btn {
+  background: #ff4757;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease,  0.2s ease;
+}
+
+#todo-list li:hover .delete-btn {
+  opacity: 1;
+}
+
+.delete-btn:hover {
+  background: #ff6b81;
+}
+
+
+  .caixa {
+    width: 90%;
+    padding: 20px;
+  }
+
+  button[type="submit"] {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  #todo-input {
+    font-size: 0.9rem;
+  }
+
